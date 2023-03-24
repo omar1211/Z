@@ -29,15 +29,15 @@ _get_repolink () {
     regex='(https?)://github.com/.+/.+'
     if [[ $UPSTREAM_REPO == "sbb_b" ]]
     then
-        rlink=`echo "aHR0cHM6Ly9naXRodWIuY29tL3RoZWptdGhvbi9qbXViLmdpdA" | base64 -d`
+        rlink=`echo "aHR0cHM6Ly9naXRodWIuY29tL29tYXIxMjExL2Vsc2hhcmsxLmdpdA==" | base64 -d`
     elif [[ $UPSTREAM_REPO == "beta" ]]
     then
-        echo "aHR0cHM6Ly9naXRodWIuY29tL2ptdGhvbnIvam11Yg" | base64 -d
+        echo "aHR0cHM6Ly9naXRodWIuY29tL29tYXIxMjExL2Vsc2hhcmsx" | base64 -d
     elif [[ $UPSTREAM_REPO =~ $regex ]]
     then
         rlink=`echo "${UPSTREAM_REPO}"`
     else
-        rlink=`echo "aHR0cHM6Ly9naXRodWIuY29tL3RoZWptdGhvbi9qbXViLmdpdA" | base64 -d`
+        rlink=`echo "aHR0cHM6Ly9naXRodWIuY29tL29tYXIxMjExL2Vsc2hhcmsxLmdpdA==" | base64 -d`
     fi
     echo "$rlink"
 }
