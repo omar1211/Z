@@ -9,7 +9,7 @@ _get_ziplink () {
         echo "aHR0cHM6Ly9naXRodWIuY29tL29tYXIxMjExL2Vsc2hhcmsxL2FyY2hpdmUvbWFzdGVyLnppcA==" | base64 -d
     elif [[ $UPSTREAM_REPO == "beta" ]]
     then
-        echo "aHR0cHM6Ly9naXRodWIuY29tL2ptdGhvbnIvam11Yi9hcmNoaXZlL21hc3Rlci56aXA==" | base64 -d
+        echo "aHR0cHM6Ly9naXRodWIuY29tL29tYXIxMjExL2Vsc2hhcmsxL2FyY2hpdmUvbWFzdGVyLnppcA==" | base64 -d
     elif [[ $UPSTREAM_REPO =~ $regex ]]
     then
         if [[ $UPSTREAM_REPO_BRANCH ]]
